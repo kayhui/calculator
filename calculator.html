@@ -29,7 +29,7 @@
   <div class="container-fluid">
     <div class="row">
       <div id="displayZone" class="col-4">
-        <div id="first" class="container-fluid">
+        <div id="first" class="container-fluid sec">
           <div class="row">
             <div class="col-6 p-0">
               <div class="form-floating h-100">
@@ -61,7 +61,8 @@
           <div class="btn-group me-2" role="group">
             <button type="button" class="btn btn-outline-secondary fs-2" onclick="createNewDiv()"><i
                 class="bi bi-plus-lg"></i> Add</button>
-            <button type="button" class="btn btn-outline-secondary fs-2" ><i class="bi bi-dash-lg"></i>
+            <button type="button" id="remove" class="btn btn-outline-secondary fs-2 " onclick="removeDiv()"><i
+                class="bi bi-dash-lg"></i>
 
               Remove</button>
             <button type="button" class="btn btn-outline-secondary fs-2" onclick="calculate()"><i
@@ -71,10 +72,10 @@
         </div>
       </div>
       <div class="col-1">
-        <i class="bi bi-megaphone fs-1"></i>
+        <i class="bi bi-megaphone fs-1" style="float:right;color: red;"></i>
       </div>
       <div class="col">
-        <p id="radio" class="fs-1" style="flex: end 0;"></p>
+        <p id="radio" class="fs-1" style="flex: end 0;color: red;"></p>
       </div>
     </div>
   </div>
@@ -93,8 +94,20 @@
     }
 
     function createNewDiv() {
-      // First create a DIV element.
-      $($("#first")[0]).clone().appendTo("#displayZone");
+
+      // $($("#first")[0]).clone().appendTo("#displayZone");
+      $($(".sec")[0]).clone().appendTo("#displayZone");
+      // $("#remove").classname ="btn btn-outline-secondary fs-2";
+    }
+
+    function removeDiv() {
+      
+      if ($(".sec").length > 1) {
+        $(".sec").last().remove();
+        console.log($("#first").length);
+
+
+      }
     }
 
   </script>
