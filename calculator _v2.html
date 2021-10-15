@@ -18,6 +18,10 @@
       padding-bottom: 10px;
       padding-top: 10px;
     }
+    
+    #header{
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -25,18 +29,41 @@
 
   <div class="container-fluid">
     <div class="row">
-      <p id="radio" class="fs-2 " style="flex: end 0;"></p>
+      <p id="discretion" class="fs-4 ps-4">
+        Please input the pages number in the relative boxes.
+        <br>press cal button to calculate the time cost.
+      </p>
     </div>
+    <div class="row">
+      <!-- <p id="radio" class="fs-2 " style="flex: end 0;"></p> -->
+      <p id="radio" class="fs-2 ps-4"></p>
+
+    </div>
+    <div id="header"class="row">
+      <div class="col-4">
+        <div class="container-fluid firstAlgorite">
+          <div class="row">
+            <div class="col-5 p-0">
+              <input class="form-control h-100" type="text" value="Paper size (content)" readonly>
+            </div>
+            <div class="col-6 p-0">
+                <input class="form-control h-100 " type="text" value="Pages" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="row">
       <div id="displayZone" class="col-4">
         <div id="A4EN" class="container-fluid firstAlgorite">
           <div class="row">
-            <div class="col-3 p-0">
-              <input class="form-control h-100" type="text" value="A4(EN)" disabled readonly>
+            <div class="col-5 p-0">
+              <input class="form-control h-100" type="text" value="A4 (Text)" disabled readonly>
             </div>
             <div class="col-6 p-0">
               <div class="form-floating h-100">
-                <input type="number" class="form-control h-100 inputNumA4En" id="floatingInput" placeholder="">
+                <input type="text" class="form-control h-100 inputNumA4En" id="floatingInput" placeholder="">
                 <label for="floatingInput">Input pages</label>
               </div>
             </div>
@@ -55,8 +82,8 @@
       <div id="displayZone" class="col-4">
         <div id="A4TC" class="container-fluid firstAlgorite">
           <div class="row">
-            <div class="col-3 p-0">
-              <input class="form-control h-100" type="text" value="A4(TC/SC)" disabled readonly>
+            <div class="col-5 p-0">
+              <input class="form-control h-100" type="text" value="A4 (Text+Img)" readonly>
             </div>
             <div class="col-6 p-0">
               <div class="form-floating h-100">
@@ -73,8 +100,8 @@
       <div id="displayZone" class="col-4">
         <div id="A3EN" class="container-fluid firstAlgorite">
           <div class="row">
-            <div class="col-3 p-0">
-              <input class="form-control h-100" type="text" value="A3(EN)" disabled readonly>
+            <div class="col-5 p-0">
+              <input class="form-control h-100" type="text" value="A3 (Text)" readonly>
             </div>
             <div class="col-6 p-0">
               <div class="form-floating h-100">
@@ -90,8 +117,8 @@
       <div id="displayZone" class="col-4">
         <div id="A3TC" class="container-fluid firstAlgorite">
           <div class="row">
-            <div class="col-3 p-0">
-              <input class="form-control h-100" type="text" value="A3(TC/SC)" disabled readonly>
+            <div class="col-5 p-0">
+              <input class="form-control h-100" type="text" value="A3 (Text+Img)" disabled readonly>
             </div>
             <div class="col-6 p-0">
               <div class="form-floating h-100">
@@ -139,10 +166,10 @@
       //   var s = Math.floor((taketime % 60));
       //   $("#radio").html("Time required about " + h + " Hour " + m + " Min " + s + " Sec ");
       // }
-      console.log($(".inputNumA4En").val());
-      console.log($(".inputNumA4Tc").val());
-      console.log($(".inputNumA3En").val());
-      console.log($(".inputNumA3Tc").val());
+      // console.log($(".inputNumA4En").val());
+      // console.log($(".inputNumA4Tc").val());
+      // console.log($(".inputNumA3En").val());
+      // console.log($(".inputNumA3Tc").val());
     }
 
 
